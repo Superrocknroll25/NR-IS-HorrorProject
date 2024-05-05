@@ -22,14 +22,16 @@ public class Rotate : MonoBehaviour
         if (ItemTransform.transform.eulerAngles.x >= 50f)
         {
             Debug.Log("down");
-            m_LeftLegCenterOfGravity.SetBool("GreaterThan50", true);
-            m_LeftLegCenterOfGravity.SetBool("LessThan-50", false);
+            m_LeftLegCenterOfGravity.Play("LeftLegDown");
+            /*m_LeftLegCenterOfGravity.SetBool("GreaterThan50", true);
+            m_LeftLegCenterOfGravity.SetBool("LessThan-50", false);*/
         }
         else if (ItemTransform.transform.eulerAngles.x <= -50f)
         {
+            m_LeftLegCenterOfGravity.Play("LeftLegUp");
             Debug.Log("up");
-            m_LeftLegCenterOfGravity.SetBool("LessThan-50", true);
-            m_LeftLegCenterOfGravity.SetBool("GreaterThan50", false);
+            /*m_LeftLegCenterOfGravity.SetBool("LessThan-50", true);
+            m_LeftLegCenterOfGravity.SetBool("GreaterThan50", false);*/
         }
     }
 }

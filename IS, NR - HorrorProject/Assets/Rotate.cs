@@ -7,6 +7,8 @@ public class Rotate : MonoBehaviour
     Animator m_LeftLegCenterOfGravity;
     public int RotationSpeed = 100;
     private Transform ItemTransform;
+    public bool goingUp;
+    public bool goingDown;
     /*public GameObject LeftLegCentOfGrav;*/
     // Start is called before the first frame update
     void Start()
@@ -18,20 +20,32 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_LeftLegCenterOfGravity.SetBool("SeeingPlayer", true);
         ItemTransform.Rotate(RotationSpeed * Time.deltaTime, 0, 0);
-        if (ItemTransform.transform.eulerAngles.x >= 50f)
+        if (ItemTransform.transform.rotation.x >= 50)
         {
             Debug.Log("down");
-            m_LeftLegCenterOfGravity.Play("LeftLegDown");
-            /*m_LeftLegCenterOfGravity.SetBool("GreaterThan50", true);
-            m_LeftLegCenterOfGravity.SetBool("LessThan-50", false);*/
+            m_LeftLegCenterOfGravity.SetBool("GreaterThan50", true);
+            m_LeftLegCenterOfGravity.SetBool("LessThan0", false);
         }
-        else if (ItemTransform.transform.eulerAngles.x <= -50f)
+        else if (ItemTransform.transform.rotation.x <= 0)
         {
-            m_LeftLegCenterOfGravity.Play("LeftLegUp");
             Debug.Log("up");
-            /*m_LeftLegCenterOfGravity.SetBool("LessThan-50", true);
-            m_LeftLegCenterOfGravity.SetBool("GreaterThan50", false);*/
+            m_LeftLegCenterOfGravity.SetBool("LessThan0", true);
+            m_LeftLegCenterOfGravity.SetBool("GreaterThan50", false);
+        }
+        else
+        {
+            if(goingUp == true)
+            {
+                m_LeftLegCenterOfGravity.SetBool("LessThan0", true);
+                m_LeftLegCenterOfGravity.SetBool("GreaterThan50", false);
+            }
+            if(goingDown == false)
+            {
+                m_LeftLegCenterOfGravity.SetBool("GreaterThan50", true);
+                m_LeftLegCenterOfGravity.SetBool("LessThan0", false);
+            }
         }
     }
 }

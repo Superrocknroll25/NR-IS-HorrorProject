@@ -40,7 +40,7 @@ AnimatorStateTransition:
     m_ConditionEvent: GreaterThan50
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: LessThan-50
+    m_ConditionEvent: LessThan0
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8787751844731971612}
@@ -99,7 +99,7 @@ AnimatorStateTransition:
     m_ConditionEvent: GreaterThan50
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: LessThan-50
+    m_ConditionEvent: LessThan0
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4907682678055994781}
@@ -129,19 +129,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: LessThan-50
+    m_Controller: {fileID: 0}
+  - m_Name: LessThan0
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
   - m_Name: SeeingPlayer
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -223,7 +223,7 @@ AnimatorStateTransition:
     m_ConditionEvent: GreaterThan50
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: LessThan-50
+    m_ConditionEvent: LessThan0
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: SeeingPlayer
@@ -254,7 +254,7 @@ AnimatorStateTransition:
     m_ConditionEvent: GreaterThan50
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: LessThan-50
+    m_ConditionEvent: LessThan0
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: SeeingPlayer

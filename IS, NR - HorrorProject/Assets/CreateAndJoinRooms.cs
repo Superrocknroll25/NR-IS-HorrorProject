@@ -18,11 +18,6 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public void JoinRoom()
     {
-<<<<<<< Updated upstream
-        Debug.Log("Joined");
-=======
-        
->>>>>>> Stashed changes
         PhotonNetwork.JoinRoom(joinInput.text);
     }
 

@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 39936240536453366}
   - component: {fileID: 39936240536453367}
   - component: {fileID: 39936240536453364}
-  - component: {fileID: 4739249581339876745}
+  - component: {fileID: -8595814036364879229}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -193,7 +193,8 @@ MonoBehaviour:
   GroundMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &4739249581339876745
+  view: {fileID: -8595814036364879229}
+--- !u!114 &-8595814036364879229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

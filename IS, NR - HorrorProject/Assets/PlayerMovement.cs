@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
-    public PhotonView view;
+    
 
     
 
@@ -26,8 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (view.IsMine)
-        {
+       
             isGrounded = Physics.CheckSphere(GroundCheck.position, groundDistance, GroundMask);
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
@@ -53,6 +52,6 @@ public class PlayerMovement : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime);
         }
-        }
+        
     }
 

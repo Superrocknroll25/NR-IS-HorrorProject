@@ -152,7 +152,7 @@ Transform:
   - {fileID: 39936242014899177}
   - {fileID: 39936240552881771}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &39936240536453367
 CharacterController:
@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 39936240685527533}
   - component: {fileID: 39936240685527530}
   - component: {fileID: 39936240685527531}
+  - component: {fileID: 3632085583971421607}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: Untagged
@@ -409,6 +410,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 150
   PlayerBody: {fileID: 39936240536453366}
+  view1: {fileID: 3632085583971421607}
+--- !u!114 &3632085583971421607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39936240685527529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &39936241456662244
 GameObject:
   m_ObjectHideFlags: 0

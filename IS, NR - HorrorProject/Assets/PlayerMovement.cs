@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,13 +17,17 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+    public PhotonView view;
 
     
 
 
+
+
     void Update()
     {
-        
+        if (view.IsMine)
+        {
             isGrounded = Physics.CheckSphere(GroundCheck.position, groundDistance, GroundMask);
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
@@ -48,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
+        }
         }
     }
 

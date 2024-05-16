@@ -20,7 +20,7 @@ public class Crosshair : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                hit.collider.gameObject.name = HitWhat;
+                hit.collider.name = HitWhat;
                 Debug.Log(HitWhat);
             }
         }

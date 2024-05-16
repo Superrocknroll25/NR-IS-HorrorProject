@@ -5,6 +5,7 @@ using UnityEngine;
 public class Crosshair : MonoBehaviour
 {
     RaycastHit hit;
+    int layerMask = 1 << 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,10 @@ public class Crosshair : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Physics.Raycast(Vector3.zero, Vector3.forward, 3f);
+            if(Physics.Raycast(transform.position, Vector3.forward, out hit, 3f, layerMask))
+            {
+                Debug.Log(hit.collider.gameObject.name);
+            }
         }
     }
 }

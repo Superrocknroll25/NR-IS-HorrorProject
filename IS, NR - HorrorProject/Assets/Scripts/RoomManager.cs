@@ -32,6 +32,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
 
+        Debug.Log("HIm");
+
         PhotonNetwork.JoinOrCreateRoom("Test", null, null);
 
         

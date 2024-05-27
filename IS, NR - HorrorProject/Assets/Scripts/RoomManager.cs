@@ -32,11 +32,12 @@ public class RoomManager : MonoBehaviourPunCallbacks
     {
         base.OnJoinedLobby();
 
+        
+
+        PhotonNetwork.JoinOrCreateRoom("test", null, null);
+
         Debug.Log("HIm");
 
-        PhotonNetwork.JoinOrCreateRoom("Test", null, null);
-
-        
 
     }
     public override void OnJoinedRoom()
@@ -46,5 +47,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Debug.Log("Him number 2");
 
         GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+        _player.GetComponent<PlayerSetup>().IsLocalPlayer();
     }
 }

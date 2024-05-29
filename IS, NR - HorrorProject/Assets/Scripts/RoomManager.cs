@@ -10,36 +10,19 @@ public class RoomManager : MonoBehaviourPunCallbacks
     [Space]
     public Transform spawnPoint;
 
+    public string roomNameToJoin = "test";
+
     // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        Debug.Log("Connecting...");
+        Debug.Log("Connectijg");
 
-        PhotonNetwork.ConnectUsingSettings();
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        base.OnConnectedToMaster();
-
-        Debug.Log("Connected to Server");
-
-        PhotonNetwork.JoinLobby();
+        PhotonNetwork.JoinOrCreateRoom(roomNameToJoin, null, null);
     }
 
 
-    public override void OnJoinedLobby()
-    {
-        base.OnJoinedLobby();
 
-        
-
-        PhotonNetwork.JoinOrCreateRoom("test", null, null);
-
-        Debug.Log("HIm");
-
-
-    }
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();

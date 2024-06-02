@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612325709939340, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
       propertyPath: m_Name
-      value: Trooper 2 (1)
+      value: Trooper 2 (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4761948994995092, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4761948994995092, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4761948994995092, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.36628437
+      value: 0.912
       objectReference: {fileID: 0}
     - target: {fileID: 4761948994995092, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -75,3 +75,24 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
+--- !u!1 &8817533667337866397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1612325709939340, guid: e676e517c4941491d95dfa150fccf01c, type: 3}
+  m_PrefabInstance: {fileID: 8816805905209003537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &6146322514264328806
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8817533667337866397}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0

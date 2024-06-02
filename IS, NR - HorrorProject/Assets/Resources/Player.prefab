@@ -5105,5 +5105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a71a7ed918945bfa6665eed7cfd825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Inventory: {fileID: 0}
   RaycastCam: {fileID: 770941355205718635}
   range: 4

@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    List<string> InventorySpace = new List<string>();
+
+    public void AddToInventory(string Item)
     {
-        
+        InventorySpace.Add(Item);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

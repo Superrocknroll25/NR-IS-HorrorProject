@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CrossHair : MonoBehaviour
 {
+
+    public InventorySystem Inventory;
+
     public Camera RaycastCam;
 
     public float range = 4;
@@ -23,6 +26,11 @@ public class CrossHair : MonoBehaviour
         if (Physics.Raycast(RaycastCam.transform.position, RaycastCam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
+
+            if (hit.transform.name == "Stick")
+            {
+                Inventory.AddToInventory("Stick");
+            }
         }
     }
 }

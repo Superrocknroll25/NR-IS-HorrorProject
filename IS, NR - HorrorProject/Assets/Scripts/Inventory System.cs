@@ -8,10 +8,7 @@ public class InventorySystem : MonoBehaviour
 
     public void AddToInventory(string Item)
     {
-        if (InventorySpace.Contains(Item))
-        {
-            InventorySpace.Add(Item);
-        }
+        InventorySpace.Add(Item);
     }
 
 }

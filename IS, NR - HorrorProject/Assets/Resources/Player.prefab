@@ -798,6 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 770941355326129010}
   camera: {fileID: 770941355205718639}
+  PauseMenuLocal: 0
 --- !u!1 &770941355342556654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,6 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1664013569482642895}
   MouseLookScript: {fileID: 770941355205718637}
+  ps: {fileID: 273774598349150232}
 --- !u!1 &4582882915438095284
 GameObject:
   m_ObjectHideFlags: 0

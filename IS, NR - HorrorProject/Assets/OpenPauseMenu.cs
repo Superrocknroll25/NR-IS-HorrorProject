@@ -20,16 +20,16 @@ public class OpenPauseMenu : MonoBehaviour
         }
     }
 
-    private void Open()
+    public void Open()
     {
-        //if (ps.PauseMenuIsLocal)
-        //{
+        if (ps.PauseMenuLocal)
+        {
             PauseMenu.SetActive(true);
 
             Cursor.lockState = CursorLockMode.Confined;
 
             MouseLookScript.enabled = false;
-        //}
+          }
     }
 
 

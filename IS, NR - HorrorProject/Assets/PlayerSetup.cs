@@ -8,12 +8,15 @@ public class PlayerSetup : MonoBehaviour
 
     public GameObject camera;
 
+    public bool PauseMenuLocal = false;
 
     public void IsLocalPlayer()
     {
         movement.enabled = true;
 
         camera.SetActive(true);
+
+        PauseMenuLocal = true;
     }
 
 }

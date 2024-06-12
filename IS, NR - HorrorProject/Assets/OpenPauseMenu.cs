@@ -9,6 +9,9 @@ public class OpenPauseMenu : MonoBehaviour
 
     [SerializeField] MouseLook MouseLookScript;
 
+
+    public PlayerSetup ps;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -19,11 +22,14 @@ public class OpenPauseMenu : MonoBehaviour
 
     private void Open()
     {
-        PauseMenu.SetActive(true);
+        //if (ps.PauseMenuIsLocal)
+        //{
+            PauseMenu.SetActive(true);
 
-        Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Confined;
 
-        MouseLookScript.enabled = false;
+            MouseLookScript.enabled = false;
+        //}
     }
 
 

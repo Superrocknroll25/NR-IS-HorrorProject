@@ -17,10 +17,10 @@ public class AnimatePlayer : MonoBehaviour
     {
         if(rb.velocity == Vector3.zero)
         {
-            animator.SetBool("Moving", false);
+            animator.Play("Idle");
         } else
         {
-            animator.SetBool("Moving", true);
+            animator.Play("Running");
         }
     }
 }

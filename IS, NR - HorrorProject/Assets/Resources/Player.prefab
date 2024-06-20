@@ -677,7 +677,6 @@ GameObject:
   - component: {fileID: 8896347354723571678}
   - component: {fileID: 3172540640440632}
   - component: {fileID: 273774598349150232}
-  - component: {fileID: 1838156564024980005}
   - component: {fileID: 5080527626088504614}
   m_Layer: 8
   m_Name: Player
@@ -801,20 +800,6 @@ MonoBehaviour:
   movement: {fileID: 770941355326129010}
   camera: {fileID: 770941355205718639}
   PauseMenuLocal: 0
---- !u!114 &1838156564024980005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770941355326129011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64445549fd4c1454c9e743c46d29b32f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cc: {fileID: 770941355326129009}
-  FootstepsAudio: {fileID: 0}
 --- !u!82 &5080527626088504614
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2482,7 +2467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

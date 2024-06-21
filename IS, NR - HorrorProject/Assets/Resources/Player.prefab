@@ -800,6 +800,7 @@ MonoBehaviour:
   movement: {fileID: 770941355326129010}
   camera: {fileID: 770941355205718639}
   PauseMenuLocal: 0
+  InventoryUI: {fileID: 0}
 --- !u!82 &5080527626088504614
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1107,7 +1108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1767455786267329488
 Transform:
   m_ObjectHideFlags: 0

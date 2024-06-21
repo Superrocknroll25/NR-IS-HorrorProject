@@ -10,6 +10,8 @@ public class PlayerSetup : MonoBehaviour
 
     public bool PauseMenuLocal = false;
 
+    public GameObject InventoryUI;
+
     public void IsLocalPlayer()
     {
         movement.enabled = true;
@@ -17,6 +19,8 @@ public class PlayerSetup : MonoBehaviour
         camera.SetActive(true);
 
         PauseMenuLocal = true;
+
+        InventoryUI.SetActive(true);
     }
 
 }

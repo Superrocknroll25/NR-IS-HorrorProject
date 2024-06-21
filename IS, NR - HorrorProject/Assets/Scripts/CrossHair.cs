@@ -32,6 +32,7 @@ public class CrossHair : MonoBehaviour
             if (hit.transform.name == "Stick")
             {
                 Inventory.AddToInventory("Stick", StickUI);
+
             }
         }
     }

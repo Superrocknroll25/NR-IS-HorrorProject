@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CrossHair : MonoBehaviour
-{
+    {
+    [SerializeField] Sprite StickUI;
 
     public InventorySystem Inventory;
 
@@ -29,7 +31,7 @@ public class CrossHair : MonoBehaviour
 
             if (hit.transform.name == "Stick")
             {
-                Inventory.AddToInventory("Stick");
+                Inventory.AddToInventory("Stick", StickUI);
             }
         }
     }

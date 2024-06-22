@@ -17,6 +17,7 @@ public class InventorySystem : MonoBehaviour
     private Image Slot3Image;
     private Image Slot4Image;
 
+    
     private void Start()
     {
         Slot1Image = Slot1.GetComponent<Image>();
@@ -27,14 +28,41 @@ public class InventorySystem : MonoBehaviour
 
     public void AddToInventory(string Item, Sprite Sprite)
     {
+
         if (!InventorySpace.Contains(Item))
         {
-            InventorySpace.Add(Item);
+             InventorySpace.Add(Item);
 
+            Image[] slotImages = { Slot1Image, Slot2Image, Slot3Image, Slot4Image};
+
+            foreach (Image slotImage in slotImages)
+            {
+                if (slotImage.sprite == null)
+                {
+                    slotImage.sprite = Sprite;
+                    break;
+                }
+            }
+
+            
+          /*  
             if (Slot1Image.sprite == null)
             {
                 Slot1Image.sprite = Sprite;
             }
+            else if (Slot2Image.sprite == null)
+            {
+                Slot2Image.sprite = Sprite;
+            }
+            else if (Slot3Image.sprite == null)
+            {
+                Slot3Image.sprite = Sprite;
+            }
+            else if (Slot4Image.sprite == null)
+            {
+                Slot4Image.sprite = Sprite;
+            }
+            */
         }
     }
 

@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float HorizontalSpeed;
 
+    public Animator animator;
+
 
 
 
@@ -57,7 +59,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (velocity.magnitude > 0)
         {
-            
+            animator.Play("Running");
+        } else if(velocity.magnitude == 0)
+        {
+            animator.Play("Idle");
         }
         
         }

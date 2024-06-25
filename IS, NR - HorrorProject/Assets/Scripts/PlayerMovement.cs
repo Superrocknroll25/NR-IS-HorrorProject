@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using Photon.Pun;
 
 public class PlayerMovement : MonoBehaviour
@@ -57,12 +58,15 @@ public class PlayerMovement : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime);
 
-        if (velocity.magnitude > 0)
+        if (velocity.magnitude > 0.5f)
         {
-            animator.Play("Running");
+            Debug.Log("Moving");
+            animator.SetBool("Moving", true);
+            animator.SetBool("Idle", false);
         } else if(velocity.magnitude == 0)
         {
-            animator.Play("Idle");
+            animator.SetBool("Moving", false);
+            animator.SetBool("Idle", true);
         }
         
         }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3791017567204221115}
   - component: {fileID: 2576339542642814825}
   - component: {fileID: 724389016724208725}
+  - component: {fileID: -4474690573779309941}
   m_Layer: 0
   m_Name: FullHuman
   m_TagString: Untagged
@@ -98,3 +99,23 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2477511411847689622, guid: bd1f4b57c0aa18a4fa07c3fec08f9f29, type: 3}
+--- !u!95 &-4474690573779309941
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6195930739135342956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bffa9919c6c167b49b0471a3e4eb96b4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

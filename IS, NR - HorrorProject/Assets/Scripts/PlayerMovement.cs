@@ -22,9 +22,9 @@ public class PlayerMovement : MonoBehaviour
     public float HorizontalSpeed;
 
     public Animator animator;
+    public float Elapsed;
 
-
-
+    Vector3 previousFramePosition;
 
     void Update()
     {
@@ -58,13 +58,24 @@ public class PlayerMovement : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime);
 
-        if (velocity.magnitude > 0.5f)
+        Elapsed = Time.deltaTime;
+
+        if(Elapsed >= 1.0f)
+        {
+            Elapsed = 0;
+            previousFramePosition = transform.position;
+        }
+
+        float movementPerFrame = Vector3.Distance(previousFramePosition, transform.position);
+
+        if (transform.position != previousFramePosition)
         {
             Debug.Log("Moving");
             animator.SetBool("Moving", true);
             animator.SetBool("Idle", false);
-        } else if(velocity.magnitude == 0)
+        } else if(transform.position == previousFramePosition)
         {
+            Debug.Log("Idle");
             animator.SetBool("Moving", false);
             animator.SetBool("Idle", true);
         }

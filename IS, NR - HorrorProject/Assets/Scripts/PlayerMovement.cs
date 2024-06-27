@@ -60,9 +60,9 @@ public class PlayerMovement : MonoBehaviour
 
         Elapsed += Time.deltaTime;
 
-        if(Elapsed >= 1.0f)
+        if(Elapsed > 1.0f)
         {
-            Elapsed = 0;
+            Elapsed -= 1.0f;
             previousFramePosition = transform.position;
         }
 

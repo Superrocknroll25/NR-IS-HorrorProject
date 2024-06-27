@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
             controller.Move(velocity * Time.deltaTime);
 
-        Elapsed += Time.deltaTime;
+        Elapsed = Time.deltaTime;
 
         if(Elapsed > 1.0f)
         {

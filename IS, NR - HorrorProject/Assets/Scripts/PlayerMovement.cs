@@ -20,8 +20,6 @@ public class PlayerMovement : MonoBehaviour
 
     public float HorizontalSpeed;
 
-    public Animator animator;
-
 
 
 
@@ -56,14 +54,6 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
-
-        if (velocity.magnitude > 0)
-        {
-            animator.Play("Running");
-        } else if(velocity.magnitude == 0)
-        {
-            animator.Play("Idle");
-        }
         
         }
     }
